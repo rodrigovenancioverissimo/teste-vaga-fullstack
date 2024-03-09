@@ -4,6 +4,6 @@ import { Query, Resolver } from '@nestjs/graphql';
 export class RecordsResolver {
   @Query(() => [String])
   findRegister() {
-    return [];
+    return ['ok'];
   }
 }

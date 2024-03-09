@@ -1,7 +1,7 @@
 import { Query, Resolver } from '@nestjs/graphql';
 
 @Resolver()
-export class RegisterResolver {
+export class RecordsResolver {
   @Query(() => [String])
   findRegister() {
     return [];

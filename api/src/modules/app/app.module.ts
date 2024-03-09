@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { CsvModule } from '../csv/csv.module';
-import { RegisterModule } from '../register/register.module';
+import { RecordsModule } from '../records/records.module';
 
 @Module({
   imports: [
@@ -15,7 +15,7 @@ import { RegisterModule } from '../register/register.module';
       sortSchema: true,
     }),
     CsvModule,
-    RegisterModule,
+    RecordsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

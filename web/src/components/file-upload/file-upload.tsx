@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { FileInput } from "../file-input/file-input";
 import parseFileToBase64 from "@/utils/parse-file-to-base-64";
 import { useMutation } from "@apollo/client";
+import Button from "../button/button";
 
 const importFromCsv = graphql(/* GraphQL */ `
   mutation ImportFromCsv($file: String!) {
@@ -34,11 +35,14 @@ export default function FileUpload() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        className='flex flex-row p-4 bg-green-800 gap-4'
+      >
         <FileInput onChange={setFile} />
-        <button type='submit' className=''>
-          Upload CSV
-        </button>
+        <Button type='submit' className='py-5 px-8'>
+          Enviar
+        </Button>
       </form>
     </>
   );

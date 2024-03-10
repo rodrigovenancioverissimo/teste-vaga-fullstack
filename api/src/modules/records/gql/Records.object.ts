@@ -3,6 +3,9 @@ import { Field, ObjectType } from '@nestjs/graphql';
 @ObjectType()
 export class Record {
   @Field()
+  id: number;
+
+  @Field()
   nrInst: number;
 
   @Field()

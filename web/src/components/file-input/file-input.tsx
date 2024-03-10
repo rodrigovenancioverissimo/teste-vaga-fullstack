@@ -10,7 +10,12 @@ export function FileInput({ onChange }: ComponentProps) {
   }
   return (
     <>
-      <input type='file' onChange={handleFile} accept={".csv"} />
+      <input
+        type='file'
+        onChange={handleFile}
+        accept={".csv"}
+        className='bg-gray-50 p-1 rounded-md hover:opacity-90'
+      />
     </>
   );
 }

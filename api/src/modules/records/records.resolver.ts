@@ -1,13 +1,14 @@
-import { Query, Resolver } from '@nestjs/graphql';
-import { FindRecords } from './services/find-records/find-records.service';
-import { Record } from './Records';
+import { Args, Query, Resolver } from '@nestjs/graphql';
+import { FindRecordsService } from './services/find-records/find-records.service';
+import { FindRecordsArgs } from './gql/FindRecords.args';
+import { FindRecordsObject } from './gql/FindRecords.object';
 
 @Resolver()
 export class RecordsResolver {
-  constructor(private readonly findRecordsService: FindRecords) {}
+  constructor(private readonly findRecordsService: FindRecordsService) {}
 
-  @Query(() => [Record])
-  findRegister() {
-    return this.findRecordsService.run();
+  @Query(() => FindRecordsObject)
+  findRegister(@Args() args: FindRecordsArgs) {
+    return this.findRecordsService.run(args);
   }
 }

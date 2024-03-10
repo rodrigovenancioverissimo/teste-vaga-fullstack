@@ -1,6 +1,6 @@
 import * as moment from 'moment';
-import { csvDTO } from '../interface/csv';
-import { RecordDTO } from '../interface/records';
+import { csvDTO } from '../../interface/csv';
+import { RecordDTO } from '../../interface/records';
 
 export default function formatRecord(data: csvDTO): RecordDTO {
   const intl = new Intl.NumberFormat('pt-BR', {

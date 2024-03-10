@@ -1,4 +1,4 @@
-import { RecordDTO } from '../interface/records';
+import { RecordDTO } from '../../interface/records';
 
 export default function validatePayment(payment: RecordDTO): boolean {
   const toInt = (str: string) => parseInt(str.replace(/[^\d,]/g, ''));

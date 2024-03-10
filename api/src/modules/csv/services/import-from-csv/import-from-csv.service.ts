@@ -1,11 +1,11 @@
 import { csvDTO } from '../../interface/csv';
-import validatePayment from '../../utils/validate-payment';
-import formatRecord from '../../utils/format-record';
-import validateDocument from '../../utils/validate-document';
+import validatePayment from '../../utils/validate-payment/validate-payment.util';
+import formatRecord from '../../utils/format-records/format-record.util';
+import validateDocument from '../../utils/validate-document/validate-document.util';
 import * as base64 from 'base64-js';
 import { Readable } from 'stream';
 import * as csvParser from 'csv-parser';
-import { PrismaService } from 'src/modules/prisma/prisma.service';
+import { PrismaService } from '../../../prisma/prisma.service';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -19,7 +19,7 @@ export class ImportFromCsvService {
 
     const readableStream = Readable.from(decodedString);
 
-    await new Promise((resolve) => {
+    await new Promise((resolve, reject) => {
       readableStream
         .pipe(csvParser())
         .on('data', async (row: csvDTO) => {

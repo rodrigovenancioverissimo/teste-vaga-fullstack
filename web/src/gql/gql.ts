@@ -13,7 +13,8 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-    "\n  query findRegister {\n    findRegister\n  }\n": types.FindRegisterDocument,
+    "\n  mutation ImportFromCsv($file: String!) {\n    importFromCsv(file: $file)\n  }\n": types.ImportFromCsvDocument,
+    "\n  query FindRegister {\n    findRegister {\n      cdCarteira\n      cdClient\n      cdProduto\n      dsCarteira\n      dsProduto\n      dtContrato\n      dtVctPre\n      idSitVen\n      idSituac\n      isDocumentValid\n      isPaymentValid\n      nmClient\n      nrAgencia\n      nrContrato\n      nrCpfCnpj\n      nrInst\n      nrPresta\n      nrProposta\n      nrSeqPre\n      qtPrestacoes\n      tpPresta\n      vlAtual\n      vlDescon\n      vlIof\n      vlMora\n      vlMulta\n      vlOutAcr\n      vlPresta\n      vlTotal\n    }\n  }\n": types.FindRegisterDocument,
 };
 
 /**
@@ -33,7 +34,11 @@ export function graphql(source: string): unknown;
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n  query findRegister {\n    findRegister\n  }\n"): (typeof documents)["\n  query findRegister {\n    findRegister\n  }\n"];
+export function graphql(source: "\n  mutation ImportFromCsv($file: String!) {\n    importFromCsv(file: $file)\n  }\n"): (typeof documents)["\n  mutation ImportFromCsv($file: String!) {\n    importFromCsv(file: $file)\n  }\n"];
+/**
+ * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function graphql(source: "\n  query FindRegister {\n    findRegister {\n      cdCarteira\n      cdClient\n      cdProduto\n      dsCarteira\n      dsProduto\n      dtContrato\n      dtVctPre\n      idSitVen\n      idSituac\n      isDocumentValid\n      isPaymentValid\n      nmClient\n      nrAgencia\n      nrContrato\n      nrCpfCnpj\n      nrInst\n      nrPresta\n      nrProposta\n      nrSeqPre\n      qtPrestacoes\n      tpPresta\n      vlAtual\n      vlDescon\n      vlIof\n      vlMora\n      vlMulta\n      vlOutAcr\n      vlPresta\n      vlTotal\n    }\n  }\n"): (typeof documents)["\n  query FindRegister {\n    findRegister {\n      cdCarteira\n      cdClient\n      cdProduto\n      dsCarteira\n      dsProduto\n      dtContrato\n      dtVctPre\n      idSitVen\n      idSituac\n      isDocumentValid\n      isPaymentValid\n      nmClient\n      nrAgencia\n      nrContrato\n      nrCpfCnpj\n      nrInst\n      nrPresta\n      nrProposta\n      nrSeqPre\n      qtPrestacoes\n      tpPresta\n      vlAtual\n      vlDescon\n      vlIof\n      vlMora\n      vlMulta\n      vlOutAcr\n      vlPresta\n      vlTotal\n    }\n  }\n"];
 
 export function graphql(source: string) {
   return (documents as any)[source] ?? {};

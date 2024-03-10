@@ -1,4 +1,4 @@
-import moment from 'moment';
+import * as moment from 'moment';
 import { csvDTO } from '../interface/csv';
 import { RecordDTO } from '../interface/records';
 

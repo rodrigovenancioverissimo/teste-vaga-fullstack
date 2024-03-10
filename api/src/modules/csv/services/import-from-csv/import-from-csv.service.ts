@@ -1,11 +1,10 @@
-import { RecordDTO } from '../../interface/records';
 import { csvDTO } from '../../interface/csv';
 import validatePayment from '../../utils/validate-payment';
 import formatRecord from '../../utils/format-record';
 import validateDocument from '../../utils/validate-document';
 import * as base64 from 'base64-js';
 import { Readable } from 'stream';
-import csvParser from 'csv-parser';
+import * as csvParser from 'csv-parser';
 import { PrismaService } from 'src/modules/prisma/prisma.service';
 import { Injectable } from '@nestjs/common';
 
@@ -25,14 +24,14 @@ export class ImportFromCsvService {
         .pipe(csvParser())
         .on('data', async (row: csvDTO) => {
           const record = formatRecord(row);
+          const data = {
+            ...record,
 
+            isDocumentValid: validateDocument(record.nrCpfCnpj),
+            isPaymentValid: validatePayment(record),
+          };
           await this.prisma.records.create({
-            data: {
-              ...record,
-
-              isDocumentValid: validateDocument(record.nrCpfCnpj),
-              isPaymentValid: validatePayment(record),
-            },
+            data,
           });
         })
         .on('end', async () => {

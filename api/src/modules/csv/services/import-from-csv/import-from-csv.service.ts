@@ -19,7 +19,7 @@ export class ImportFromCsvService {
 
     const readableStream = Readable.from(decodedString);
 
-    await new Promise((resolve, reject) => {
+    await new Promise((resolve) => {
       readableStream
         .pipe(csvParser())
         .on('data', async (row: csvDTO) => {

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/modules/prisma/prisma.service';
+import { PrismaService } from '../../../prisma/prisma.service';
 import { FindRecordsArgs } from '../../gql/FindRecords.args';
 import { Prisma } from '@prisma/client';
 
@@ -16,7 +16,7 @@ export class FindRecordsService {
 
     const skip = ((args?.page || 1) - 1) * take;
 
-    const orderBy: Prisma.RecordsOrderByWithRelationInput = args.orderBy
+    const orderBy: Prisma.RecordsOrderByWithRelationInput = args?.orderBy
       ? {
           [args.orderBy]: 'asc',
         }

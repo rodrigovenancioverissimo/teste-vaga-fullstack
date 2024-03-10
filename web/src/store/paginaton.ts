@@ -13,7 +13,8 @@ const usePagination = create<State>()(
       (set) => ({
         page: 1,
         next: () => set((state) => ({ page: state.page + 1 })),
-        previous: () => set((state) => ({ page: state.page - 1 })),
+        previous: () =>
+          set((state) => ({ page: state.page > 1 ? state.page - 1 : 1 })),
       }),
       {
         name: "pagination-store",

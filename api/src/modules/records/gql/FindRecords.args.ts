@@ -7,4 +7,10 @@ export class FindRecordsArgs {
 
   @Field({ nullable: true })
   nrCpfCnpj?: string;
+
+  @Field({ nullable: true })
+  nmClient?: string;
+
+  @Field({ nullable: true })
+  orderBy?: string;
 }

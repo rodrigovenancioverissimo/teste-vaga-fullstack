@@ -17,7 +17,7 @@ type Mutation {
 }
 
 type Query {
-  findRegister(nrCpfCnpj: String, page: Float): FindRecordsObject!
+  findRegister(nmClient: String, nrCpfCnpj: String, orderBy: String, page: Float): FindRecordsObject!
 }
 
 type Record {

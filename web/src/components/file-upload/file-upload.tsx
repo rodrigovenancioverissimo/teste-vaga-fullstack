@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-async-client-component */
 import { graphql } from "@/gql";
 import { FormEvent, useState } from "react";
-import { FileInput } from "../file-input/file-input";
+import FileInput from "../file-input/file-input";
 import parseFileToBase64 from "@/utils/parse-file-to-base-64";
 import { useMutation } from "@apollo/client";
 import Button from "../button/button";

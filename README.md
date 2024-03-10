@@ -72,7 +72,7 @@ Você foi designado para desenvolver uma aplicação full stack para lidar com g
    - [ ] Implemente tratativas eficientes para a leitura e fornecimento de grandes volumes de dados.
 
 4. *Arquitetura - Opcional:*
-   - [ ] Implemente a arquitetura hexagonal ou DDD.
+   - [x] Implemente a arquitetura hexagonal ou DDD.
 
 5. *Banco de Dados:*
    - [x] Utilize MongoDB ou PostgreSQL como banco de dados.
@@ -87,8 +87,8 @@ Você foi designado para desenvolver uma aplicação full stack para lidar com g
    - [ ] Demonstre conhecimento em Flatbuffer para otimizar a serialização e desserialização de dados.
 
 2. *Testes Unitários e Automatizados:*
-   - [ ] Implemente testes unitários para o frontend e o backend.
-   - [ ] Utilize ferramentas como Jest, Testing Library, Mocha, etc.
+   - [x] Implemente testes unitários para o frontend e o backend.
+   - [x] Utilize ferramentas como Jest, Testing Library, Mocha, etc.
 
 3. *Conteinerização:*
    - [x] Utilize Docker para conteinerizar a aplicação.

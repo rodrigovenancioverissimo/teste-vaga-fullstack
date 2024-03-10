@@ -18,6 +18,7 @@ export default function SelectInput({ label, options, onChange }: Props) {
         </label>
         <select
           id='select'
+          data-testid='select'
           onChange={onChange}
           className='shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
         >

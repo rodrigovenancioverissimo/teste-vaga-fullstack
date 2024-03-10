@@ -104,7 +104,7 @@ export default function RecordsList() {
   return (
     <>
       <div>
-        <div className='flex flex-row gap-4 items-start bg-slate-200 px-4 pb-2'>
+        <div className='flex flex-row flex-wrap gap-4 items-start bg-slate-200 px-4 pb-2'>
           <TextInput
             onChange={(e) => {
               setNrCpfCnpj(e.target.value);

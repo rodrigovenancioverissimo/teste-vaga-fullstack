@@ -37,7 +37,7 @@ export default function FileUpload() {
     <>
       <form
         onSubmit={handleSubmit}
-        className='flex flex-row p-4 bg-green-800 gap-4'
+        className='flex flex-row flex-wrap p-4 bg-green-800 gap-4'
       >
         <FileInput onChange={setFile} />
         <Button type='submit' className='py-5 px-8'>

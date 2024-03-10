@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/client";
 import { useState } from "react";
 import TextInput from "../text-input/text-input";
 import Button from "../button/button";
+import usePagination from "@/store/paginaton";
 
 const findRegister = graphql(/* GraphQL */ `
   query FindRegister($nrCpfCnpj: String, $page: Float) {
@@ -80,18 +81,12 @@ const columns = [
 
 export default function RecordsList() {
   const [nrCpfCnpj, setNrCpfCnpj] = useState<string>();
-  const [page, setPage] = useState(1);
+  const { next, previous, page } = usePagination();
   const { data, loading } = useQuery(findRegister, {
     variables: { nrCpfCnpj, page },
   });
   const n: number = data?.findRegister.count || 0;
-  function next() {
-    setPage(page + 1);
-  }
-  function previous() {
-    if (page === 1) return;
-    setPage(page - 1);
-  }
+
   return (
     <>
       <div>

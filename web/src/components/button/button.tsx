@@ -4,7 +4,7 @@ export default function Button({
   className,
   children,
   ...rest
-}: ButtonHTMLAttributes<{}>) {
+}: ButtonHTMLAttributes<any>) {
   return (
     <>
       <button

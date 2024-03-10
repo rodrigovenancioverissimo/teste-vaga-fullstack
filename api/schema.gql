@@ -2,10 +2,47 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
 type Mutation {
-  importFromCsv: String!
+  importFromCsv(file: String!): String!
 }
 
 type Query {
-  findRegister: [String!]!
+  findRegister: [Record!]!
+}
+
+type Record {
+  cdCarteira: Float!
+  cdClient: Float!
+  cdProduto: Float!
+  dsCarteira: String!
+  dsProduto: String!
+  dtContrato: DateTime!
+  dtVctPre: DateTime!
+  idSitVen: String!
+  idSituac: String!
+  isDocumentValid: Boolean!
+  isPaymentValid: Boolean!
+  nmClient: String!
+  nrAgencia: Float!
+  nrContrato: Float!
+  nrCpfCnpj: String!
+  nrInst: Float!
+  nrPresta: Float!
+  nrProposta: Float!
+  nrSeqPre: Float!
+  qtPrestacoes: Float!
+  tpPresta: String!
+  vlAtual: String!
+  vlDescon: String!
+  vlIof: String!
+  vlMora: String!
+  vlMulta: String!
+  vlOutAcr: String!
+  vlPresta: String!
+  vlTotal: String!
 }

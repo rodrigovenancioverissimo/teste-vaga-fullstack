@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "apollographql.vscode-apollo",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "prisma.prisma"
   ]
 }

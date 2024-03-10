@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Records {
+  id           Int      @id @default(autoincrement())
+  nrInst       Int
+  nrAgencia    Int
+  cdClient     Int
+  nmClient     String
+  nrCpfCnpj    String?
+  nrContrato   Int
+  dtContrato   DateTime
+  qtPrestacoes Int
+  vlTotal      String
+  cdProduto    Int
+  dsProduto    String
+  cdCarteira   Int
+  dsCarteira   String
+  nrProposta   Int
+  nrPresta     Int
+  tpPresta     String
+  nrSeqPre     Int
+  dtVctPre     DateTime
+  vlMora       String
+  vlMulta      String
+  vlOutAcr     String
+  vlIof        String
+  vlAtual      String
+  vlDescon     String
+  vlPresta     String
+  idSituac     String
+  idSitVen     String
+
+  isDocumentValid Boolean
+  isPaymentValid  Boolean
+}

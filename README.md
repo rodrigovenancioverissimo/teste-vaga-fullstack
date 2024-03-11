@@ -1,4 +1,4 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Cw5wgGA74WM?si=vATk0liWn9Z_gRvW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[https://youtu.be/Cw5wgGA74WM](https://youtu.be/Cw5wgGA74WM)
 
 # Instruções de uso:
 

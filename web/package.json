@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "generate": "graphql-codegen"
   },
   "dependencies": {
     "@apollo/client": "^3.9.6",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "graphql": "^16.8.1",
     "next": "14.1.3",
     "react": "^18",

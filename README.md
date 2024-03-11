@@ -1,3 +1,18 @@
+# Instruções de uso:
+
+Para instalar é simples, basta ter o docker e docker compose em sua máquina e executar o
+comando 
+```
+docker compose up
+```
+
+Caso queira executar apenas o banco de dados para executar as aplicações fora do container use
+```
+docker compose -f docker-compose.yml up
+```
+
+
+
 # Teste Prático para Desenvolvedor Full Stack Kronoos
 
 Você foi designado para desenvolver uma aplicação full stack para lidar com grandes volumes de dados. A aplicação consistirá em um frontend usando Vite ou Next.js, se comunicando com um backend que pode ser construído utilizando HTTP ou WebSocket para troca de dados. O backend será responsável por fornecer uma massa de dados considerável (cerca de 30GB). Além disso, a aplicação deve ser capaz de lidar com dados fornecidos em um formato CSV mal formatado.
@@ -84,7 +99,7 @@ Você foi designado para desenvolver uma aplicação full stack para lidar com g
 ## Opcionais (Pontos Extras)
 
 1. *Conhecimento em Flatbuffer:*
-   - [ ] Demonstre conhecimento em Flatbuffer para otimizar a serialização e desserialização de dados.
+   - [-] Demonstre conhecimento em Flatbuffer para otimizar a serialização e desserialização de dados.
 
 2. *Testes Unitários e Automatizados:*
    - [x] Implemente testes unitários para o frontend e o backend.
@@ -94,7 +109,7 @@ Você foi designado para desenvolver uma aplicação full stack para lidar com g
    - [x] Utilize Docker para conteinerizar a aplicação.
 
 4. *Orquestração de Containers:*
-   - [ ] Utilize Kubernetes para orquestrar os containers.
+   - [x] Utilize Kubernetes para orquestrar os containers.
 
 5. *Integração Contínua:*
    - [ ] Configure integração contínua com Jenkins.

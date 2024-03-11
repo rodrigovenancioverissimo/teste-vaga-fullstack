@@ -15,11 +15,11 @@ export default class ImportFromCsvV2Service {
     CSV.addCdCarteira(builder, row.cdCarteira);
     CSV.addCdClient(builder, row.cdClient);
     CSV.addCdProduto(builder, row.cdProduto);
-    CSV.addDsCarteira(builder, row.dsCarteira);
-    CSV.addDsProduto(builder, row.dsProduto);
-    CSV.addDtContrato(builder, row.dtContrato);
-    CSV.addDtVctPre(builder, row.dtVctPre);
+    // CSV.addDsCarteira(builder, row.dsCarteira);
+    // CSV.addDsProduto(builder, row.dsProduto);
+    // CSV.addDtContrato(builder, row.dtContrato);
+    // CSV.addDtVctPre(builder, row.dtVctPre);
 
-    this.prisma.records.create({ data: {} });
+    // this.prisma.records.create({ data: {} });
   }
 }

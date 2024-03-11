@@ -3,7 +3,7 @@ import { graphql } from "@/gql";
 import { FormEvent, useState } from "react";
 import FileInput from "../file-input/file-input";
 import parseFileToBase64 from "@/utils/parse-file-to-base-64";
-import { useMutation } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 import Button from "../button/button";
 
 const importFromCsv = graphql(/* GraphQL */ `
@@ -27,6 +27,7 @@ export default function FileUpload() {
       console.log("Enviando");
       const str = await parseFileToBase64(file);
       await mutation({ variables: { file: str } });
+      window.location.reload();
       alert("Arquivo enviado com sucesso!");
     } catch (error) {
       console.error("Error uploading CSV:", error);

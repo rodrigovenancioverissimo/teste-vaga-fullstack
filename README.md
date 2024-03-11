@@ -1,3 +1,5 @@
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cw5wgGA74WM?si=vATk0liWn9Z_gRvW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 # Instruções de uso:
 
 Para instalar é simples, basta ter o docker e docker compose em sua máquina e executar o
@@ -10,6 +12,8 @@ Caso queira executar apenas o banco de dados para executar as aplicações fora 
 ```
 docker compose -f docker-compose.yml up
 ```
+
+Ou ainda a aplicação pode ser executado via kubernetes. Os arquivos de configurações estão na pasta k3d
 
 
 

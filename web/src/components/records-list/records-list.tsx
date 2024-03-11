@@ -7,7 +7,7 @@ import Button from "../button/button";
 import usePagination from "@/store/paginaton";
 import SelectInput from "../select-input/select-input";
 
-const findRegister = graphql(/* GraphQL */ `
+const findRegisterQuery = graphql(/* GraphQL */ `
   query FindRegister(
     $nrCpfCnpj: String
     $nmClient: String
@@ -96,7 +96,7 @@ export default function RecordsList() {
   const [orderBy, setOrderBy] = useState<string>();
 
   const { next, previous, page } = usePagination();
-  const { data } = useQuery(findRegister, {
+  const { data } = useQuery(findRegisterQuery, {
     variables: { nrCpfCnpj, nmClient, page, orderBy },
   });
   const n: number = data?.findRegister.count || 0;
@@ -136,7 +136,7 @@ export default function RecordsList() {
                 ))}
               </tr>
             </thead>
-            <tbody>
+            <tbody className='items-start'>
               {data?.findRegister.data.map((item, i) => (
                 <tr
                   className='bg-white border-b hover:bg-gray-50 whitespace-nowrap'
